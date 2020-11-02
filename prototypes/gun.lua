@@ -36,11 +36,28 @@ local spidertronmk3_rocket_launcher_4_item = table_deepcopy(data.raw["gun"]["spi
 spidertronmk3_rocket_launcher_4_item.name = "spidertronmk3-rocket-launcher-4"
 spidertronmk3_rocket_launcher_4_item.attack_parameters.range = 72
 
+-- mk4 rocket launchers
+local spidertronmk4_rocket_launcher_1_item = table_deepcopy(data.raw["gun"]["spidertron-rocket-launcher-1"])
+spidertronmk4_rocket_launcher_1_item.name = "spidertronmk4-rocket-launcher-1"
+spidertronmk4_rocket_launcher_1_item.attack_parameters.range = 90
+
+local spidertronmk4_rocket_launcher_2_item = table_deepcopy(data.raw["gun"]["spidertron-rocket-launcher-2"])
+spidertronmk4_rocket_launcher_2_item.name = "spidertronmk4-rocket-launcher-2"
+spidertronmk4_rocket_launcher_2_item.attack_parameters.range = 90
+
+local spidertronmk4_rocket_launcher_3_item = table_deepcopy(data.raw["gun"]["spidertron-rocket-launcher-3"])
+spidertronmk4_rocket_launcher_3_item.name = "spidertronmk4-rocket-launcher-3"
+spidertronmk4_rocket_launcher_3_item.attack_parameters.range = 90
+
+local spidertronmk4_rocket_launcher_4_item = table_deepcopy(data.raw["gun"]["spidertron-rocket-launcher-4"])
+spidertronmk4_rocket_launcher_4_item.name = "spidertronmk4-rocket-launcher-4"
+spidertronmk4_rocket_launcher_4_item.attack_parameters.range = 90
+
 local spidertron_builder_laser = {
     name = "spidertron-experimental-laser",
     type = "gun",
     subgroup = "gun",
-    icon = "__spidertron-extended__/graphics/spidertron_builder_laser_turret_1.png",
+    icon = "__spidertron-extended-dukey-edition__/graphics/spidertron_builder_laser_turret_1.png",
     icon_size = 64,
     stack_size = 5,
     -- i tried, it didn't work
@@ -63,7 +80,7 @@ local spidertron_builder_laser2 = {
     name = "spidertron-experimental-laser2",
     type = "gun",
     subgroup = "gun",
-    icon = "__spidertron-extended__/graphics/spidertron_builder_laser_turret_2.png",
+    icon = "__spidertron-extended-dukey-edition__/graphics/spidertron_builder_laser_turret_2.png",
     icon_size = 64,
     stack_size = 5,
     attack_parameters = {
@@ -95,7 +112,7 @@ local immolator_flamethrower = {
     name = "spidertron-immolator-flamethrower",
     type = "gun",
     subgroup = "gun",
-    icon = "__spidertron-extended__/graphics/spidertron_immolator_gun_icon_2.png",
+    icon = "__spidertron-extended-dukey-edition__/graphics/spidertron_immolator_gun_icon_2.png",
     icon_size = 64,
     stack_size = 5,
     attack_parameters = immolator_flame_parameters
@@ -146,6 +163,10 @@ data:extend{
     spidertronmk3_rocket_launcher_2_item,
     spidertronmk3_rocket_launcher_3_item,
     spidertronmk3_rocket_launcher_4_item,
+    spidertronmk4_rocket_launcher_1_item,
+    spidertronmk4_rocket_launcher_2_item,
+    spidertronmk4_rocket_launcher_3_item,
+    spidertronmk4_rocket_launcher_4_item,
     spidertron_builder_laser,
     spidertron_builder_laser2,
     immolator_flamethrower

@@ -1,7 +1,7 @@
 {
-    "name": "spidertron-extended",
-    "version": "0.3.5",
-    "title": "Spidertron Extended",
+    "name": "spidertron-extended-dukey-edition",
+    "version": "0.1.1",
+    "title": "Spidertron Extended Dukey Edition",
     "author": "charleans, resarium",
     "factorio_version": "1.0",
     "dependencies": ["base >= 1.0"],

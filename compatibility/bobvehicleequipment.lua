@@ -28,7 +28,13 @@ if not settings.startup["disable-spidertronmk3"].value then
         "armoured-vehicle"
     }
 end
-
+if not settings.startup["disable-spidertronmk4"].value then
+    data.raw["equipment-grid"]["spidertronmk4-grid"].equipment_categories = {
+        "spidertron",
+        "vehicle",
+        "armoured-vehicle"
+    }
+end
 if not settings.startup["disable-spidertron-builder"].value then
     data.raw["equipment-grid"]["spidertron-builder-grid"].equipment_categories = {
         "spidertron",

@@ -9,6 +9,7 @@ if mods["Krastorio2"] then
     -- copying the grid equipment here since the variables are available here
     data.raw["equipment-grid"]["spidertronmk2-grid"].equipment_categories = data.raw["equipment-grid"]["kr-spidertron-equipment-grid"].equipment_categories
     data.raw["equipment-grid"]["spidertronmk3-grid"].equipment_categories = data.raw["equipment-grid"]["kr-spidertron-equipment-grid"].equipment_categories
+    data.raw["equipment-grid"]["spidertronmk4-grid"].equipment_categories = data.raw["equipment-grid"]["kr-spidertron-equipment-grid"].equipment_categories
     data.raw["equipment-grid"]["spidertron-builder-grid"].equipment_categories = data.raw["equipment-grid"]["kr-spidertron-equipment-grid"].equipment_categories
     data.raw["equipment-grid"]["immolator-grid"].equipment_categories = data.raw["equipment-grid"]["kr-spidertron-equipment-grid"].equipment_categories
 end
@@ -35,6 +36,7 @@ if mods["bobequipment"] then
         data.raw["equipment-grid"]["spidertron-equipment-grid"].equipment_categories = grid_items
         data.raw["equipment-grid"]["spidertronmk2-grid"].equipment_categories = grid_items
         data.raw["equipment-grid"]["spidertronmk3-grid"].equipment_categories = grid_items
+        data.raw["equipment-grid"]["spidertronmk4-grid"].equipment_categories = grid_items
         data.raw["equipment-grid"]["spidertron-builder-grid"].equipment_categories = grid_items
         data.raw["equipment-grid"]["immolator-grid"].equipment_categories = grid_items
     end

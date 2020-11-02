@@ -4,28 +4,35 @@ local table_deepcopy = util.table.deepcopy
 
 local iconsmk2 = {
     {
-        icon = "__spidertron-extended__/icons/spidertron_extended_mk2_item.png", 
+        icon = "__spidertron-extended-dukey-edition__/icons/spidertron_extended_mk2_item.png", 
         icon_size = 64, 
         icon_mipmaps = 4
     }
 }
 local iconsmk3 = {
     {
-        icon = "__spidertron-extended__/icons/spidertron_extended_mk3_item.png", 
+        icon = "__spidertron-extended-dukey-edition__/icons/spidertron_extended_mk3_item.png", 
+        icon_size = 64, 
+        icon_mipmaps = 4
+    }
+}
+local iconsmk4 = {
+    {
+        icon = "__spidertron-extended-dukey-edition__/icons/spidertron_extended_mk4_item.png", 
         icon_size = 64, 
         icon_mipmaps = 4
     }
 }
 local icon_sp_builder = {
     {
-        icon = "__spidertron-extended__/icons/spidertron_extended_builder_item.png",
+        icon = "__spidertron-extended-dukey-edition__/icons/spidertron_extended_builder_item.png",
         icon_size = 64, 
         icon_mipmaps = 4
     }
 }
 local immolator = {
     {
-        icon = "__spidertron-extended__/icons/spidertron_extended_immolator_item.png", 
+        icon = "__spidertron-extended-dukey-edition__/icons/spidertron_extended_immolator_item.png", 
         icon_size = 64, 
         icon_mipmaps = 4
     }
@@ -60,7 +67,22 @@ if not settings.startup["disable-spidertronmk3"].value then
         spidertronmk3_item
     }
 end
-    
+  
+-- mk4 item
+if not settings.startup["disable-spidertronmk4"].value then
+    local spidertronmk4_item = table_deepcopy(data.raw["item-with-entity-data"]["spidertron"])
+    spidertronmk4_item.name = "spidertronmk4"
+    spidertronmk4_item.icon = nil
+    spidertronmk4_item.icon_size = nil
+    spidertronmk4_item.icon_mipmaps = nil
+    spidertronmk4_item.icons = iconsmk4
+    spidertronmk4_item.order = "b[personal-transport]-c[spidertron]-ab[spidertronmk4]"
+    spidertronmk4_item.place_result = "spidertronmk4"
+    data:extend{
+        spidertronmk4_item
+    }
+end
+
 -- builder item
 if not settings.startup["disable-spidertron-builder"].value then
     local spidertron_builder_item = table_deepcopy(data.raw["item-with-entity-data"]["spidertron"])

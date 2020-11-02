@@ -58,6 +58,14 @@ data:extend({
 		default_value = false,
 		order = "a30"
 	},
+	-- to disable spidertronmk4
+	{
+		type = "bool-setting",
+		name = "disable-spidertronmk4",
+		setting_type = "startup",
+		default_value = false,
+		order = "a30"
+	},
     -- grid sizes for mk3
     {
 		type = "int-setting",
@@ -96,6 +104,48 @@ data:extend({
     {
 		type = "bool-setting",
 		name = "disable-health-regenmk3",
+		setting_type = "startup",
+		default_value = false,
+		order = "a36"
+	},
+	-- grid sizes for mk4
+	{
+		type = "int-setting",
+		name = "spidertronmk4-width",
+		setting_type = "startup",
+		minimum_value = 10,
+		default_value = 40,
+		order = "a32"
+	},
+	{
+		type = "int-setting",
+		name = "spidertronmk4-height",
+		setting_type = "startup",
+		minimum_value = 6,
+		default_value = 15,
+		order = "a33"
+	},
+	-- inventory size for mk4
+	{
+		type = "int-setting",
+		name = "spidertronmk4-invsize",
+		setting_type = "startup",
+		minimum_value = 1,
+		default_value = 180,
+		order = "a34"
+	},
+	-- hp for mk4
+	{
+		type = "int-setting",
+		name = "spidertronmk4-hp",
+		setting_type = "startup",
+		minimum_value = 1,
+		default_value = 15000,
+		order = "a35"
+	},
+	{
+		type = "bool-setting",
+		name = "disable-health-regenmk4",
 		setting_type = "startup",
 		default_value = false,
 		order = "a36"
@@ -231,14 +281,6 @@ data:extend({
 		setting_type = "startup",
 		default_value = false,
 		order = "m02"
-	},
-    -- to disable spidertronmk4
-    {
-		type = "bool-setting",
-		name = "disable-spidertronmk4",
-		setting_type = "startup",
-		default_value = false,
-		order = "x1"
 	},
     {
 		type = "bool-setting",

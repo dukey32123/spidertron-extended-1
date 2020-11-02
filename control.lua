@@ -24,6 +24,11 @@ function(event)
         spidertronmk3.color = {0.5, 0, 0.5, 0.5}
         -- when spidertronmk3 is created add it to the table
         table.insert(global.spidertronmk3, spidertronmk3)
+    elseif event.created_entity.name == "spidertronmk4" then
+        local spidertronmk4 = event.created_entity
+        spidertronmk4.color = {0.7, 0, 0.5, 0.2}
+        -- when spidertronmk4 is created add it to the table
+        table.insert(global.spidertronmk4, spidertronmk4)
     elseif event.created_entity.name == "spidertron-builder" then
         local spidertron_builder = event.created_entity
         spidertron_builder.color = {1, 1, 1, 0.5}
@@ -179,11 +184,21 @@ script.on_nth_tick(60, function(event)
     if global.spidertronmk3 == nil then
         global.spidertronmk3 = {}
     end
+
+    if global.spidertronmk4 == nil then
+        global.spidertronmk4 = {}
+    end
     
     -- adding these lines for compatibility with older saves
     global.spidertronmk3_health_regen = 15
     if settings.startup["disable-health-regenmk3"].value then
         global.spidertronmk3_health_regen = 0
+    end
+
+    -- adding these lines for compatibility with older saves
+    global.spidertronmk4_health_regen = 25
+    if settings.startup["disable-health-regenmk4"].value then
+        global.spidertronmk4_health_regen = 0
     end
     
     for key, spidertronmk3 in pairs(global.spidertronmk3) do
@@ -194,7 +209,15 @@ script.on_nth_tick(60, function(event)
             table.remove(global.spidertronmk3, key)
         end
     end
-    
+
+    for key, spidertronmk4 in pairs(global.spidertronmk4) do
+        if spidertronmk4.valid then
+            -- i want to try add this in a setting
+            spidertronmk4.health = spidertronmk4.health + global.spidertronmk4_health_regen
+        else
+            table.remove(global.spidertronmk4, key)
+        end
+    end
     -- cooldown testing
     if not (global.cooldown == nil) then
         -- game.print(dump(global.cooldown))
@@ -221,5 +244,11 @@ script.on_init(function()
     global.spidertronmk3_health_regen = 15
     if settings.startup["disable-health-regenmk3"].value then
         global.spidertronmk3_health_regen = 0
+    end
+    -- declare global spidertronmk4 on init
+    global.spidertronmk4 = {}
+    global.spidertronmk4_health_regen = 25
+    if settings.startup["disable-health-regenmk4"].value then
+        global.spidertronmk4_health_regen = 0
     end
 end)

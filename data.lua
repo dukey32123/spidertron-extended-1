@@ -15,6 +15,7 @@ require("prototypes.vanilla")
 -- new spidertrons
 require("prototypes.spidertronmk2")
 require("prototypes.spidertronmk3")
+require("prototypes.spidertronmk4")
 require("prototypes.spidertron_builder")
 require("prototypes.immolator")
 

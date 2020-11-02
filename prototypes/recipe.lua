@@ -58,6 +58,43 @@ if not settings.startup["disable-spidertronmk3"].value then
     }
 end
 
+-- mk4 recipe
+if not settings.startup["disable-spidertronmk4"].value then
+    local ingr = {
+        {"spidertronmk3",1},
+        {"low-density-structure",300},
+        {"fusion-reactor-equipment",5},
+        {"beacon",30},
+        {"speed-module-3",30},
+        {"effectivity-module-3",30},
+        {"satellite",2}
+    }
+    if settings.startup["disable-spidertronmk3"].value then
+        -- if spidertronmk2 disabled use this recipe
+        ingr = {
+            {"spidertronmk2",1},
+            {"low-density-structure",150},
+            {"fusion-reactor-equipment",2},
+            {"beacon",10},
+            {"speed-module-3",10},
+            {"effectivity-module-3",10},
+            {"satellite",1}
+        }
+    end
+    local spidertronmk4_recipe = {
+        type = "recipe",
+        name = "spidertronmk4",
+        enabled = false,
+        ingredients = ingr,
+        energy_required = 10,
+        result = "spidertronmk4"
+    }
+    data:extend{
+        spidertronmk4_recipe
+    }
+end
+
+
 -- spider builder recipe
 if not settings.startup["disable-spidertron-builder"].value then
     local spidertron_builder_recipe = {
